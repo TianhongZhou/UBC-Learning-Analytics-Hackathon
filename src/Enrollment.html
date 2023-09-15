@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enrollment of course</title>
+    <link rel="stylesheet" type="text/css" href="Enrollment.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="home.html" class="active">Back</a></li>
+        </ul>
+        <h1>Enrollmented Students</h1>
+    </header>
+    <div title="Activity time: 985351; Assignment 1: 79; Assignment 2: 84; 
+    Assignment 3 (option C): 73; Current Score: 80.9" class="student">Learner 1</div>
+    <div title="Activity time: 152876; Assignment 1: 93; Assignment 2: 85; 
+    Assignment 3 (option C): 95; Current Score: 84.6" class="student">Learner 2</div>
+    <div class="student">Learner 3</div>
+    <div class="student">Learner 4</div>
+    <canvas id="myChart" width="800" height="400"></canvas>
+    <script>
+        const ctx = document.getElementById('myChart');
+        const data = {
+        datasets: [{
+            label: 'Total Activity Time vs Current Score',
+            data: 
+            [
+                {x: 985351,y: 80.9},
+                {x: 421763,y: 78.4},
+                {x: 285214,y: 84.3},
+                {x: 176035,y: 81.2},
+                {x: 774430,y: 85.5},
+                {x: 155823,y: 84.4},
+                {x: 113652,y: 76.2},
+                {x: 586198,y: 82},
+                {x: 1015778,y: 65.7},
+                {x: 190098,y: 69.7},
+                {x: 246997,y: 85.2},
+                {x: 152876,y: 84.6},
+                {x: 201541,y: 69.7},
+                {x: 523262,y: 78.5},
+                {x: 698439,y: 89.2},
+                {x: 601686,y: 86.4},
+                {x: 110669,y: 87.3},
+                {x: 254157,y: 87.5},
+                {x: 437181,y: 73},
+                {x: 1575148,y: 85.7},
+                {x: 209706,y: 89},
+                {x: 1371523,y: 78.3},
+                {x: 1011355,y: 77.9},
+                {x: 547149,y: 72.1},
+                {x: 604326,y: 81.3},
+                {x: 209140,y: 79.1},
+                {x: 135518,y: 70.9},
+                {x: 862185,y: 82.3},
+                {x: 675638,y: 82.9},
+                {x: 0,y: 13.8},
+                {x: 177844,y: 88},
+                {x: 426200,y: 92.2},
+                {x: 2025102,y: 87.3},
+                {x: 1036998,y: 83.6}
+            ],
+            backgroundColor: 'rgb(255, 99, 132)'
+        }],
+        };
+        const config = {
+        type: 'scatter',
+        data: data,
+        options: {
+            responsive: false,
+            maintainAspectRatio: true,
+            scales: {
+            x: {
+                type: 'linear',
+                position: 'bottom'
+            }
+            }
+        }
+        };
+        const myChart = new Chart(ctx, config);
+    </script>
+
+</body>
+</html>

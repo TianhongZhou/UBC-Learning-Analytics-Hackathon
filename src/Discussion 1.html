@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Discussion 1</title>
+    <link rel="stylesheet" type="text/css" href="Discussion 1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="Module3.html" class="active">Back</a></li>
+        </ul>
+        <h1>Discussion 1: The meaning of eLearning</h1>
+    </header>
+
+    <canvas id="myChart" width="1200" height="500"></canvas>
+    <script>
+        const ctx = document.getElementById('myChart');
+        const labels = ['1-05~1-12', '1-12~1-19', '1-19~1-26', '1-26~2-2', '2-2~2-9', '2-9~2-16', '2-16~2-23', '2-23~3-2', '3-2~3-9',
+                        '3-9~3-16', '3-16~3-23', '3-23~3-31', '4-1~4-8', '4-8~4-15', '4-15~4-22', '4-22~4-30', '5-1~5-8', '5-8~5-15', '5-15~5-25'];
+        const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Number of people navigated to Discussion 1 at different time',
+            data: [48, 181, 239, 68, 42, 7, 1, 8, 7, 10, 0, 9, 2, 1, 0, 0, 4, 3, 3],
+            backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 205, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(201, 203, 207, 0.2)'
+            ],
+            borderColor: [
+            'rgb(255, 99, 132)',
+            'rgb(255, 159, 64)',
+            'rgb(255, 205, 86)',
+            'rgb(75, 192, 192)',
+            'rgb(54, 162, 235)',
+            'rgb(153, 102, 255)',
+            'rgb(201, 203, 207)'
+            ],
+            borderWidth: 1
+        }]
+        };
+        const config = {
+        type: 'bar',
+        data: data,
+        options: {
+            responsive: false,
+            maintainAspectRatio: true,
+            scales: {
+            y: {
+                beginAtZero: true
+            }
+            }
+        },
+        };
+        const myChart = new Chart(ctx, config);
+    </script>
+</body>
+</html>

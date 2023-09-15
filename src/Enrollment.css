@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.comn/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+header
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50%;
+    padding: 0;
+}
+header h1
+{
+    position: relative;
+    top: 5px;
+    left: 64%;
+    font-size: 3em;
+    color: black;
+}
+header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 100px;
+}
+header ul li a
+{
+    text-decoration: none;
+    color: #fff;
+    border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active
+{
+    background: #fff;
+    color: #2b1055;
+}
+.student
+{
+    position: relative;
+    margin-left: 400px;
+    font-size: x-large;
+}
+canvas
+{
+    position: absolute;
+    margin-left: 360px;
+}
